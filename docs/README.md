@@ -1,4 +1,4 @@
-![header](../media/header.png)
+![header](./media/header.png)
 ## @docsify Docs 
 
 Make your markdown docs all nice
