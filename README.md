@@ -1,5 +1,5 @@
 ![header](./docs/media/header.png)
-## Docsify
+## @docsify
 
 Make your markdown docs look all nice
 
