@@ -19,10 +19,14 @@ Maintaining useful, up to date documentation for internal and external use
 
 ### Install
 
+![terminal](../media/terminal/yarn_run.png) 
+
 ```bash
 cd <working-dir>
-git clone 
-
+git clone https://github.com/listingslab-software/docsify.git
+cd docsify
+yarn run
 ```
+
 
 [by listingslab](https://listingslab.com/docsify) 
