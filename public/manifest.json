@@ -1,6 +1,8 @@
 {
   "short_name": "@docsify",
   "name": "@docsify",
+  "theme_color": "#ccd31f",
+  "background_color": "#ccd31f",
   "icons": [
     {
       "src": "favicon.ico",
@@ -19,7 +21,5 @@
     }
   ],
   "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#421c5d",
-  "background_color": "#421c5d"
+  "display": "standalone"
 }
