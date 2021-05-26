@@ -1,7 +1,20 @@
 {
-  "version": "2.0.3",
+  "version": "2.0.4",
   "name": "docsify",
   "description": "Makes markdown docs look all nice",
+  "repository": "https://github.com/listingslab-software/docsify",
+  "author": "listingslab <listingslab@gmail.com>",
+  "license": "MIT",
+
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -11,14 +24,7 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
-  },
+
   "eslintConfig": {
     "extends": [
       "react-app",
