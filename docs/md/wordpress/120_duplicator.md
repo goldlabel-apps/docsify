@@ -1,6 +1,6 @@
 ![Logo](../media/png/greybeard_header.png)  
 ## Duplicator 
-[Home](../../README.md)  
+ 
 
 - [snapcreek.com duplicator_free](https://snapcreek.com/duplicator/?utm_source=duplicator_free&utm_medium=wp_org&utm_content=desc_details&utm_campaign=duplicator_free)
 - [Quick Start](https://snapcreek.com/duplicator/docs/quick-start/)
@@ -119,3 +119,5 @@ Please see the following url:
 == Upgrade Notice ==
 
 Please use our ticketing system when submitting your logs.  Please do not post to the forums.
+
+[by listingslab](https://listingslab.com/docsify) 

@@ -1,6 +1,6 @@
 ![Logo](../media/png/greybeard_header.png)  
 ## Jira
-[Home](../../README.md) 
+
 
 
 > Cool Shit Jira & Bitbucket does for free

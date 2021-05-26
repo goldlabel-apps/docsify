@@ -23,4 +23,4 @@
 17. Plugins must respect trademarks, copyrights, and project names.
 18. We reserve the right to maintain the Plugin Directory to the best of our ability. 
 
-
+[by listingslab](https://listingslab.com/docsify) 

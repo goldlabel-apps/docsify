@@ -19,3 +19,4 @@ All code in the directory should be made as secure as possible. Security is the 
 While we attempt to account for as many relevant interpretations of the guidelines as possible, it is unreasonable to expect that every circumstance will be explicitly covered. If you are uncertain whether a plugin might violate the guidelines, please contact plugins@wordpress.org and ask.
 
 
+[by listingslab](https://listingslab.com/docsify) 

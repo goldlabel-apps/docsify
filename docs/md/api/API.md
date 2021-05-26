@@ -14,4 +14,4 @@
 
 The second param is the Action, usually something like CRUD verbs, such as Create, Read, Update, Delete
 
-![Listingslab @ToolKit](./png/react_wordpress.png)
+[by listingslab](https://listingslab.com/docsify) 

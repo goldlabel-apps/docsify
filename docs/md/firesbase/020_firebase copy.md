@@ -1,6 +1,6 @@
 ![Logo](../media/png/greybeard_header.png)  
 ## Firebase 
-[Home](../../README.md) 
+
 
 Firebase is a free & useful resource we can use to quickly and securely host HTML, Node and more
 
@@ -58,3 +58,6 @@ REACT_APP_API_IPGEO=
   firebase.initializeApp(firebaseConfig);
 </script>
 ```
+
+
+[by listingslab](https://listingslab.com/docsify) 

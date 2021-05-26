@@ -1,8 +1,4 @@
 ![Logo](../media/png/greybeard_header.png)  
 ## Agile Development
-[Home](../../README.md) 
 
-
-
-
-
+[by listingslab](https://listingslab.com/docsify)

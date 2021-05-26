@@ -1,8 +1,4 @@
 ![header](../media/png/header.png)  
 ## Agile Development
-[Home](../../README.md) 
 
-
-
-
-
+[by listingslab](https://listingslab.com/docsify) 

@@ -13,3 +13,5 @@ git clone https://github.com/listingslab-software/listingslab
 cd listingslab
 ln -s <working-dir>/listingslab/ <wp-install>/wp-content/plugins/
 ```
+
+[by listingslab](https://listingslab.com/docsify) 

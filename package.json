@@ -1,7 +1,7 @@
 {
-  "version": "2.0.2",
+  "version": "2.0.3",
   "name": "docsify",
-  "description": "Make your markdown docs look all nice",
+  "description": "Makes markdown docs look all nice",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

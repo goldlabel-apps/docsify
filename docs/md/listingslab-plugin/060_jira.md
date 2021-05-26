@@ -1,6 +1,6 @@
 ![header](../media/png/header.png)  
 ## Jira
-[Home](../../README.md) 
+
 
 
 > Cool Shit Jira & Bitbucket does for free
@@ -20,3 +20,5 @@
 - If you need to hire developer resource for short or long term, they will be able to be useful straight away with less onboarding
 
 - It's a good place to start creating proper documentation
+
+[by listingslab](https://listingslab.com/docsify) 
