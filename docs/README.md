@@ -1,14 +1,6 @@
 ![header](./media/header.png)
-## @docsify Docs 
+## @docsify
 
-> Make your markdown docs look all nice
+Make your markdown docs look all nice
 
-#### SysOps
-
-- [Firebase](./md/020_firebase.md)
-
-#### React
-
-- [Report Web Vitals](./md/010_reportWebVitals.md)
-
-> by [listingslab](https://listingslab.com)
+> ### [Start](./docs)

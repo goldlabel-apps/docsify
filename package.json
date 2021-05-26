@@ -1,5 +1,5 @@
 {
-  "version": "2.0.1",
+  "version": "2.0.2",
   "name": "docsify",
   "description": "Make your markdown docs look all nice",
   "dependencies": {
