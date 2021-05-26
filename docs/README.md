@@ -1,6 +1,4 @@
 ![header](./media/header.png)
-## @docsify
+## makes your markdown docs look all nice
 
-Make your markdown docs look all nice
-
-> ### [Start](./docs)
+> ### [START](./docs)
