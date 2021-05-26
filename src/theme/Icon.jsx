@@ -10,6 +10,7 @@ import IconGDPR from '@material-ui/icons/Security'
 import IconDocs from '@material-ui/icons/Description'
 import IconSend from '@material-ui/icons/Send'
 import IconMessage from '@material-ui/icons/QuestionAnswer'
+import InsertDocsify from '@material-ui/icons/QuestionAnswer'
 import Account from './jsx/Account'
 import IconMail from '@material-ui/icons/Mail'
 import IconDashboard from '@material-ui/icons/Dashboard'
@@ -353,12 +354,14 @@ class Icon extends Component {
             case `mail`:
                 return (<IconMail color={iconColor} />)
                 
-
             case `docs`:
                 return (<IconDocs color={iconColor} />)
 
             case `menu`:
                 return (<IconMenu color={iconColor} />)
+
+            case `docsify`:
+                return (<InsertDocsify color={iconColor} />)
 
             default: {
                 return (<IconDefault color={iconColor} />)
