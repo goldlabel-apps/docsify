@@ -5,7 +5,6 @@
   "repository": "https://github.com/listingslab-software/docsify",
   "author": "listingslab <listingslab@gmail.com>",
   "license": "MIT",
-
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -14,7 +13,6 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
-
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -24,7 +22,6 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
-
   "eslintConfig": {
     "extends": [
       "react-app",
