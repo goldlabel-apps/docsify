@@ -1,4 +1,4 @@
-![header](./media/png/header.png)  
+![header](./media/header.png)  
 ## @listingslab
 
 This Plugin takes any tired old WordPress site and magically turns it into a way superior React Progressive Web App. A Progressive WordPress App

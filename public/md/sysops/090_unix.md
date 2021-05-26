@@ -1,4 +1,5 @@
-![Logo](../media/svg/avatars/biker.svg)  
+![header](../../media/header.png) 
+ 
 ## Unix 
  
 

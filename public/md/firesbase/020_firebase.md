@@ -1,5 +1,5 @@
-![header](../media/header.png)
-[Home](../README.md) 
+![header](../../media/header.png) 
+
 ## Google Firebase 
 
 > This project optionally uses Google Firebase 

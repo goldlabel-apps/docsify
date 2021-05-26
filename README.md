@@ -1,10 +1,8 @@
-![header](./docs/media/header.png)
+![header](./public/media/header.png)
 ## Makes markdown docs look all nice 
 
 
-
-
-> ### [START](./docs/README.md) 
+> ### [START](./public/README.md) 
 
 
 [by listingslab](https://listingslab.com/docsify)

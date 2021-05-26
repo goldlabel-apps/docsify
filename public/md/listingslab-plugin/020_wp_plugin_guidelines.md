@@ -1,4 +1,5 @@
-![header](../media/png/header.png) 
+![header](../../media/header.png) 
+
 ## Wordpress Plugin Directory Guidelines 
 [Home](../README.md)
 

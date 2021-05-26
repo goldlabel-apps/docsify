@@ -1,5 +1,5 @@
-![header](../media/header.png)
-[Home](../README.md) 
+![header](../../media/header.png) 
+
 ## Report Web Vitals
 
 If you want to start measuring performance in your app, pass a function

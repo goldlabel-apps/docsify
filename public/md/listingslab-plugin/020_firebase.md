@@ -1,4 +1,5 @@
-![header](../media/png/header.png) 
+![header](../../media/header.png) 
+
 ## Google Firebase 
 [Home](../README.md)
 
