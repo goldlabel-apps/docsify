@@ -37,5 +37,5 @@ ReactDOM.render(
 	<Provider store={store}>
 		<App />
 	</Provider>, 
-	document.getElementById( 'pwa' )
+	document.getElementById( 'docsify' )
 )
