@@ -2,5 +2,7 @@
 # chmod ug+x setup
 clear
 
-echo 'Installs dependencies with npm ...'
+echo 'Installs dependencies with NPM...'
+echo '(because of storybook)'
 npm install
+yarn run

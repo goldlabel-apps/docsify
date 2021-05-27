@@ -2,7 +2,7 @@
 # chmod ug+x build
 clear
 
-echo 'Builds static assets' $1
+echo 'Builds static website into ./build folder' $1
 cd ./$1
 yarn
 yarn build
