@@ -1,7 +1,7 @@
 ![header](./media/header.png) 
 
-## Makes markdown docs look all nice
+Maintains useful, up to date documentation for internal and external use. (Makes markdown docs look all nice)
 
-> ### [START](./md/000_start.md)
+> ### [GET STARTED](./md/000_start.md)
 
 [by listingslab](https://listingslab.com/docsify) 

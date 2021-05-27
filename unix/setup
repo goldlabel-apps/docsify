@@ -2,5 +2,5 @@
 # chmod ug+x setup
 clear
 
-echo 'Setup installs dependencis with yarn...'
-yarn
+echo 'Installs dependencies with npm ...'
+npm install
