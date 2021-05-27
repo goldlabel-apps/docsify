@@ -1,6 +1,6 @@
 ![header](./public/media/header.png)
-## Makes markdown docs look all nice 
 
+Maintains useful, up to date documentation for internal and external use
 
 > ### [START](./public/README.md) 
 

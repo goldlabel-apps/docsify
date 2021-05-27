@@ -1,5 +1,5 @@
 {
-  "version": "2.0.6",
+  "version": "2.0.7",
   "name": "docsify",
   "description": "Maintains useful, up to date documentation for internal and external use",
   "repository": "https://github.com/listingslab-software/docsify",
@@ -9,7 +9,7 @@
     "setup": "$PWD/unix/setup",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "firebase deploy"
+    "deploy": "yarn build && firebase deploy"
   },
   "dependencies": {
     "@fingerprintjs/fingerprintjs": "^3.0.6",
