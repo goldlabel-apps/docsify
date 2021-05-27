@@ -7,5 +7,12 @@
 	"build:wp-admin": "$PWD/unix/build react/wp-admin",
 	"wordpressify": "$PWD/unix/wordpressify",
 	"zip": "$PWD/unix/zip",
-	"pub": "yarn wordpressify && yarn zip"
+	"pub": "yarn wordpressify && yarn zip",
+	"start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "deploy": "firebase deploy"
 }

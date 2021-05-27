@@ -1,10 +1,12 @@
 ![header](../media/header.png) 
 
-# Start
+# Getting started
 
-## Problem
+Next > Install
 
-Maintaining useful, up to date documentation for internal and external use
+## Goal of this software
+
+Maintain useful, up to date documentation for internal and external use
 
 ## Solution
 
@@ -12,21 +14,22 @@ Maintaining useful, up to date documentation for internal and external use
 
 ### Features
 
-- Progressive Web App frontend
-- Continuous Integration
-- Firebase Hosted
-- Integration with other listingslab software
+- Progressive Web App
+- Firebase 
+	- Hosting
+	- Authenication 
+- Integration with other listingslab software 
+- Continuous Integration & Deployment
 
 ### Install
-
-![terminal](../media/terminal/yarn_run.png) 
 
 ```bash
 cd <working-dir>
 git clone https://github.com/listingslab-software/docsify.git
 cd docsify
+npm i
 yarn run
 ```
-
+![terminal](../media/terminal/yarn_run.png) 
 
 [by listingslab](https://listingslab.com/docsify) 
