@@ -1,8 +1,8 @@
 {
   "short_name": "@docsify",
   "name": "@docsify",
-  "theme_color": "#ccd31f",
-  "background_color": "#ccd31f",
+  "theme_color": "#e05717",
+  "background_color": "#e05717",
   "icons": [
     {
       "src": "favicon.ico",
