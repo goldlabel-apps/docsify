@@ -1,36 +1,43 @@
 import React from 'react'
-import clsx from 'clsx'
+import { useSelector } from 'react-redux'
 import {
-  theme, 
+  themeLight, 
+  themeDark,
 } from './theme'
 import {
-  makeStyles, 
   MuiThemeProvider,  
   createMuiTheme, 
   CssBaseline,
 } from '@material-ui/core/'
-import { 
-  WordpressMenu, 
+import {
   Overlay,
-  GithubMenu,
 } from './components'
+import {
+  initPingPong
+} from './redux/pingpong/actions'
+import Localify from './Localify'
 
-const useStyles = makeStyles((theme) => ({
-  appWrap: {
-    display: 'flex',
-  },
-}))
+export default function App() {
 
-export default function App() {  
+    const appSlice = useSelector(state => state.app)
+    const pingpongSlice = useSelector(state => state.pingpong)
+    let theme = themeLight
+    const {
+      darkMode,
+    } = appSlice
+    if ( darkMode ) theme = themeDark
 
-    const classes = useStyles()
+    React.useEffect(() => {
+      const {
+        initted,
+        initting,
+      } = pingpongSlice
+      if (!initted && !initting) initPingPong()
+    }, [pingpongSlice])
 
-    return <MuiThemeProvider theme={ createMuiTheme(theme) }>
+    return <MuiThemeProvider theme={ createMuiTheme( theme ) }>
               <CssBaseline />
               <Overlay />
-              <div className={ clsx( classes.appWrap ) }>
-                <WordpressMenu />
-                <GithubMenu />
-              </div>
+              <Localify />
             </MuiThemeProvider> 
 }
