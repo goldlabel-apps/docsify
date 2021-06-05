@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+// import { useSelector } from 'react-redux'
 import clsx from 'clsx'
 import {
     makeStyles,
@@ -15,10 +15,10 @@ const useStyles = makeStyles((theme) => ({
 export default function Dashboard() {
   
   const classes = useStyles()
-  const pingpongSlice = useSelector(state => state.pingpong)
-  const {
-    ting,
-  } = pingpongSlice
+  // const pingpongSlice = useSelector(state => state.pingpong)
+  // const {
+  //   ting,
+  // } = pingpongSlice
 
 
   return <div className={ clsx( classes.dashboard ) } >
@@ -26,13 +26,10 @@ export default function Dashboard() {
 
                 <Grid item xs={ 12 } >
                   <Typography>
-                  As a visitor, I want to see something really relevant 
-                  the first time I clap eyes on the product so that I'm hooked
+                    Maintains useful, up to date documentation for internal and external use
                   </Typography>
 
-                  <pre>
-                    { JSON.stringify( ting, null, 2 ) }
-                  </pre>
+                  
                   
                 </Grid>
 
@@ -42,5 +39,7 @@ export default function Dashboard() {
 }
 
 /*
-
+<pre>
+                    { JSON.stringify( ting, null, 2 ) }
+                  </pre>
 */

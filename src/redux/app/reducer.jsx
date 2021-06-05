@@ -9,7 +9,7 @@ import {
 
 export const appSlice = {
   title: `Dashboard`,
-  darkMode: false,
+  darkMode: true,
   path: `/`,
   overlay: false,
   helpOn: true,

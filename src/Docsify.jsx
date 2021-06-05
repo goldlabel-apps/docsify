@@ -8,6 +8,7 @@ import {
   AppBar,
   Grid,
   Toolbar,
+  Typography,
   IconButton,
 } from '@material-ui/core/'
 import {
@@ -150,7 +151,10 @@ export default function Localify() {
         })}>
         <Toolbar>
 
-        
+          <Typography variant="h6" noWrap>
+            @docsify
+          </Typography>
+
           <div className={ clsx ( classes.grow ) } />
           
           <IconButton
@@ -221,8 +225,6 @@ export default function Localify() {
             
           </IconButton>
 
-<Typography variant="h6" noWrap className={classes.mightyBtn}>
-              { title }
-            </Typography>
+
             
 */

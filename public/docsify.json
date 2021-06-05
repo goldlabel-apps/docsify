@@ -1,0 +1,20 @@
+{
+	"title": "This is the main site title",
+	"sections": [
+		{
+			"name" : "How we work",
+			"description": "Agile Software Development is a set of methods and practices where solutions evolve through collaboration between self-organizing, cross-functional teams",
+			"pages": [
+				{
+					"name": "Process",
+					"filename": "010_process.md",
+				},
+				{
+					"name": "Stories",
+					"filename": "080_stories.md",
+				},
+			]
+		},
+	],
+
+}
