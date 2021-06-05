@@ -1,18 +1,40 @@
 import { createReducer } from '@reduxjs/toolkit'
 import {
-  open,
   overlay,
+  path,
+  title,
+  darkMode,
+  rightMenuOpen,
 } from "./actions"
 
 export const appSlice = {
-  open: false,
+  title: `Dashboard`,
+  darkMode: false,
+  path: `/`,
   overlay: false,
+  helpOn: true,
+  rightMenuOpen: false,
 }
 
 const appReducer = createReducer( appSlice, {
 
-  [open]: (state, action) => {
-    state.open = action.open
+  [rightMenuOpen]: (state, action) => {
+    state.rightMenuOpen = action.rightMenuOpen
+    return state
+  },
+
+  [darkMode]: (state, action) => {
+    state.darkMode = action.darkMode
+    return state
+  },
+
+  [title]: (state, action) => {
+    state.title = action.title
+    return state
+  },
+
+  [path]: (state, action) => {
+    state.path = action.path
     return state
   },
 

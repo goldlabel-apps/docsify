@@ -1,15 +1,17 @@
 import Collapsing from './Collapsing'
-import SettingsMenu from './SettingsMenu'
-import AppShell from './AppShell'
-import WordpressMenu from './WordpressMenu'
 import Overlay from './Overlay'
-import GithubMenu from './GithubMenu'
+import RightMenu from './RightMenu'
+import Mapbox from './Mapbox'
+import Dashboard from './Dashboard'
+import ImageUpload from './ImageUpload'
+import Settings from './Settings'
 
 export {
-	Collapsing, 
-	SettingsMenu, 
-	AppShell, 
-	WordpressMenu,
-	GithubMenu,
+	Collapsing,
 	Overlay,
+	RightMenu,
+	Mapbox,
+	Dashboard,
+	ImageUpload,
+	Settings,
 }
