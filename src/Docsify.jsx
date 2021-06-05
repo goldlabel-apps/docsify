@@ -11,23 +11,15 @@ import {
   Typography,
   IconButton,
 } from '@material-ui/core/'
+import { Icon } from './theme'
 import {
   toggleRightMenuOpen,
 } from './redux/app/actions'
-// import { 
-//   subscribe,
-// } from './redux/localify/actions'
-import { Icon } from './theme'
 import {
   Dashboard,
   RightMenu,
   Settings,
 } from './components'
-import {
-  TList,
-  TCreate,
-  TView,
-} from './components/Trips'
 
 const drawerWidth = 175
 
@@ -35,8 +27,12 @@ const useStyles = makeStyles((theme) => ({
   localify: {
     display: 'flex',
   },
+  btnTxt:{
+    marginRight: theme.spacing(),
+    marginLeft: theme.spacing(),
+  },
   iconBtn:{
-    marginTop: theme.spacing(0.5),
+    marginTop: theme.spacing( 0.5 ),
   },
   appBar: {
     background: 'none',
@@ -105,10 +101,6 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginRight: 0,
   },
-  btnTxt:{
-    marginRight: theme.spacing(),
-    marginLeft: theme.spacing(),
-  },
 }))
 
 export default function Localify() {
@@ -122,23 +114,13 @@ export default function Localify() {
   let routeOjb = appRouter()
   const { 
     type,
-    id,
   } = routeOjb
 
-  // const localifySlice = useSelector( state => state.localify )
-  // React.useEffect(() => {
-  //   const {
-  //     subscribing,
-  //     subscribed,
-  //   } = localifySlice
-  //   if (!subscribing && !subscribed) console.log ( 'subscribe()' )  
-  // }, [localifySlice])
-
-  const handleDrawerOpen = () => {
+  const drawerOpen = () => {
     toggleRightMenuOpen( true )
   }
 
-  const handleDrawerClose = () => {
+  const drawerClose = () => {
     toggleRightMenuOpen( false )
   }
 
@@ -160,7 +142,7 @@ export default function Localify() {
           <IconButton
             color={`secondary`}
             edge={ `end` }
-            onClick={ handleDrawerOpen }
+            onClick={ drawerOpen }
             className={ clsx( rightMenuOpen && classes.hide )}>
             <Icon icon={ `menu` } color={ `secondary` } />
           </IconButton>
@@ -178,9 +160,6 @@ export default function Localify() {
             <Grid item xs={ 12 } >
               <div>
                 { type === `dashboard` ? <Dashboard /> : null }
-                { type === `trip` ? <TView trip={{ id }} /> : null }
-                { type === `create` ? <TCreate /> : null }
-                { type === `trips` ? <TList /> : null }
                 { type === `settings` ? <Settings /> : null }
               </div>
             </Grid>
@@ -190,41 +169,20 @@ export default function Localify() {
       <Drawer
         open={ rightMenuOpen }
         className={ clsx( classes.drawer )}
-        variant="persistent"
+        variant={ `persistent` }
         anchor={ `right` }
         classes={{
           paper: classes.drawerPaper,
         }}>
 
         <div className={classes.drawerHeader}>
-          <IconButton onClick={handleDrawerClose}>
+          <IconButton onClick={drawerClose}>
             <Icon icon={ `close`} color={ `secondary` } />
           </IconButton>
         </div>
+
         <RightMenu />
+      
       </Drawer>
     </div>
 }
-
-
-
-
-
-/*
-
-
-<IconButton
-            className={ clsx (classes.none)}
-            color={ `secondary` }
-            variant={ `text` } 
-            onClick={ (e) => {
-              e.preventDefault()
-              newTrip()
-            }}>
-            <Icon icon={`new`} color={ `secondary` } />
-            
-          </IconButton>
-
-
-            
-*/
