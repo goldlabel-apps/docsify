@@ -25,10 +25,13 @@ export default function Dashboard() {
               <Grid container>
 
                 <Grid item xs={ 12 } >
-                  <Typography>
+                  <Typography gutterBottom>
                     Maintains useful, up to date documentation for internal and external use
                   </Typography>
 
+                  <Typography>
+                    read the config file
+                  </Typography>
                   
                   
                 </Grid>
