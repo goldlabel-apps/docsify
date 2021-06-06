@@ -1,9 +1,9 @@
 {
-	"title": "This is the main site title",
+	"title": "@listingslab's docs",
 	"sections": [
 		{
-			"name" : "Agile Software Development",
-			"description": "How we work",
+			"name" : "Agile Development",
+			"slug" : "agile",
 			"pages": [
 				{
 					"name": "Process",
@@ -14,6 +14,28 @@
 					"filename": "080_stories.md"
 				}
 			]
+		},
+		{
+			"name" : "API",
+			"slug" : "api"
+		},
+		{
+			"name" : "React",
+			"slug" : "react",
+			"pages": [
+				{
+					"name": "Report Web Vitals",
+					"filename": "010_reportWebVitals.md"
+				}
+			]
+		},
+		{
+			"name" : "WordPress",
+			"slug" : "wordpress"
+		},
+		{
+			"name" : "Firebase",
+			"slug" : "firebase"
 		}
 	]
 
