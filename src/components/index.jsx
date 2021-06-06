@@ -1,4 +1,4 @@
-import Collapsing from './Collapsing'
+import CollapsingMenu from './CollapsingMenu'
 import Overlay from './Overlay'
 import RightMenu from './RightMenu'
 import Mapbox from './Mapbox'
@@ -8,7 +8,7 @@ import Settings from './Settings'
 import Navigation from './Navigation'
 
 export {
-	Collapsing,
+	CollapsingMenu,
 	Overlay,
 	RightMenu,
 	Mapbox,
