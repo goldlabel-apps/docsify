@@ -5,6 +5,7 @@ import Mapbox from './Mapbox'
 import Dashboard from './Dashboard'
 import ImageUpload from './ImageUpload'
 import Settings from './Settings'
+import Navigation from './Navigation'
 
 export {
 	Collapsing,
@@ -14,4 +15,5 @@ export {
 	Dashboard,
 	ImageUpload,
 	Settings,
+	Navigation,
 }
