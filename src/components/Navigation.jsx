@@ -58,7 +58,7 @@ export default function Navigation() {
                                 goToRoute( route )
                               }}>
                               <ListItemAvatar>
-                                <Icon icon={ icon } />
+                                <Icon icon={ icon } color={ `secondary` } />
                               </ListItemAvatar>
                               <ListItemText 
                                 primary={ name }
@@ -104,7 +104,7 @@ export default function Navigation() {
                                             goToRoute( route )
                                           }}>
                                           <ListItemAvatar>
-                                            <Icon icon={ icon } />
+                                            <Icon icon={ icon } color={ `secondary` } />
                                           </ListItemAvatar>
                                           <ListItemText 
                                             primary={ name }
