@@ -5,6 +5,7 @@ import {
     makeStyles,
     Grid,
 } from '@material-ui/core/'
+import { CollapsingMenu } from './'
 
 const useStyles = makeStyles((theme) => ({
   navigation: {
@@ -28,19 +29,65 @@ export default function Navigation() {
   if ( !config ) return null
   const {
     sections,
+    pages,
   } = config
   if ( !sections ) return null
 
   return <div className={ clsx( classes.navigation ) } >
               <Grid container>
+
+
+                { pages.map( (item, i) => {
+                  
+                  const {
+                    name,
+                  } = item
+                  
+                  return <React.Fragment key={ `section_page_${i}` }>
+                            { name }
+                          </React.Fragment>
+                })}
+
                 { sections.map( (item, i) => {
-                    const { 
-                      name, 
+                    
+                    const {
+                      name,
+                      icon,
+                      defaultExpanded,
+                      pages,
+                      sections,
                     } = item
-                    return <Grid item xs={4} key={`aksd_${i}`}>
-                              <div className={ clsx( classes.section )}>
-                              { name }
-                            </div></Grid>
+
+                    return <React.Fragment key={ `section_${i}` }>
+
+                            
+
+
+                            <Grid item xs={ 12 }>
+                              <CollapsingMenu
+                                options={{
+                                  defaultExpanded,
+                                  title: name,
+                                  icon,
+                                }} >
+
+                                { pages ? <React.Fragment>
+                                  { pages.map( (item, i ) => {
+                                        return <div key={ `section_page_${i}` }>
+                                          {item.name}
+                                        </div>
+                                  })}
+                                </React.Fragment> : null }
+
+
+                                { sections ? <React.Fragment>
+                                  got sections
+                                </React.Fragment> : null }
+
+                                  
+                              </CollapsingMenu>
+                            </Grid>
+                          </React.Fragment>
                 })}
 
                   { showJSON ? <pre>

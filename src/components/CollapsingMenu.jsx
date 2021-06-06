@@ -46,16 +46,19 @@ const useStyles = makeStyles( theme => ({
 	},
 }))
 
-export default function Collapsing( props ) {
+export default function CollapsingMenu( props ) {
 	
 	const classes = useStyles()
+	
 	const { 
 		children,
 		options
 	} = props
+
 	if ( !children ) return null
+		
 	const {
-		open,
+		defaultExpanded,
 		title,
 		icon, 
 		iconColor,
@@ -63,7 +66,7 @@ export default function Collapsing( props ) {
 	} = options 
 
 	return	<Accordion 
-				expanded={ open }
+				defaultExpanded={ defaultExpanded }
 				className={clsx( classes.plainAccordion )}
 				onChange={ toggleFunc }>
 				<AccordionSummary
