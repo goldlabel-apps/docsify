@@ -1,0 +1,98 @@
+{
+	"title": "@listingslab's docs",
+	"pages": [
+		{
+			"name": "Start",
+			"icon" : "docs",
+			"filename": "000_start.md"
+		},
+		{
+			"name": "About Listingslab",
+			"icon" : "docs",
+			"filename": "000_start.md"
+		}
+	],
+	"sections": [
+		{
+			"name" : "Agile",
+			"route" : "agile",
+			"icon" : "right",
+			"defaultExpanded": false,
+			"pages": [
+				{
+					"name": "Process",
+					"icon" : "docs",
+					"filename": "agile/010_process.md"
+
+				},
+				{
+					"name": "Stories",
+					"icon" : "docs",
+					"filename": "agile/080_stories.md"
+				}
+			]
+		},
+		{
+			"name" : "API",
+			"route" : "api",
+			"icon" : "right",
+			"defaultExpanded": false,
+			"pages": [
+				{
+					"name": "Ping",
+					"icon" : "docs",
+					"filename": "api/010_ping"
+
+				}
+			]
+		},
+		{
+			"name" : "Firebase",
+			"route" : "firebase",
+			"icon" : "right"
+		},
+		{
+			"name" : "React",
+			"route" : "react",
+			"icon" : "right",
+			"pages": [
+				{
+					"name": "Report Web Vitals",
+					"filename": "react/010_reportWebVitals.md"
+				},
+				{
+					"name": "Avatars",
+					"filename": "react/040_avatars.md"
+				}
+			]
+		},
+		{
+			"name" : "Recruitment",
+			"route" : "recruitment",
+			"icon" : "right"
+		},
+		{
+			"name" : "SysOps",
+			"route" : "sysops",
+			"icon" : "right"
+		},
+		{
+			"name" : "WordPress",
+			"route" : "wordpress",
+			"icon" : "right",
+			"pages": [
+				{
+					"name": "About WordPress",
+					"filename": "wordpress/080_wordpress.md"
+				}
+			],
+			"sections": [
+				{
+					"name" : "Plugins",
+					"route" : "wordpress/plugins",
+					"icon" : "right"
+				}
+			]
+		}
+	]
+}

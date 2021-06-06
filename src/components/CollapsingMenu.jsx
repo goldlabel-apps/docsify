@@ -60,8 +60,7 @@ export default function CollapsingMenu( props ) {
 	const {
 		defaultExpanded,
 		title,
-		icon, 
-		iconColor,
+		icon,
 		toggleFunc,
 	} = options 
 
@@ -73,7 +72,7 @@ export default function CollapsingMenu( props ) {
 		          expandIcon={ <Icon icon={`panel-toggle`} color={ `secondary` } /> }
 		          id={ `help` } >
 		          <div className={ clsx( classes.icon )}>
-		          	<Icon icon={ icon } color={ iconColor } />
+		          	<Icon icon={ icon } color={ `secondary` } />
 		          </div>
 		          <Typography 
 		          	variant={ `button` }
