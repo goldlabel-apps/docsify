@@ -15,7 +15,7 @@ export const initDocsfify = () => {
 	const store = getStore()
 	store.dispatch({type: `DOCSIFY/CONFIG/LOADING`, configLoading: true })
 	store.dispatch({type: `APP/OVERLAY`, overlay: true })
-	axios.get( `/docsify.json` )
+	axios.get( `${process.env.REACT_APP_MDPATH}/docsify.json` )
 			.then(function( res ) {
 				store.dispatch({type: `DOCSIFY/CONFIG/LOADING`, configLoading: false })
 				store.dispatch({type: `DOCSIFY/CONFIG/LOADED`, configLoaded: true })
