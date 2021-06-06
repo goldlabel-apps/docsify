@@ -1,7 +1,7 @@
 {
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "docsify", 
-  "description": "Maintains useful, up to date documentation for internal and external use",
+  "description": "Maintain useful, up to date documentation for internal and external use",
   "repository": "https://github.com/listingslab-software/docsify",
   "author": "listingslab <listingslab@gmail.com>",
   "license": "MIT",
