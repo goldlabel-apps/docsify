@@ -3,41 +3,58 @@
 	"pages": [
 		{
 			"name": "Start",
+			"icon" : "docs",
+			"filename": "000_start.md"
+		},
+		{
+			"name": "About Listingslab",
+			"icon" : "docs",
 			"filename": "000_start.md"
 		}
 	],
 	"sections": [
 		{
 			"name" : "Agile",
-			"slug" : "agile",
-			"icon" : "section",
+			"route" : "agile",
+			"icon" : "right",
 			"defaultExpanded": false,
 			"pages": [
 				{
 					"name": "Process",
+					"icon" : "docs",
 					"filename": "agile/010_process.md"
-				},
 
+				},
 				{
 					"name": "Stories",
+					"icon" : "docs",
 					"filename": "agile/080_stories.md"
 				}
 			]
 		},
 		{
 			"name" : "API",
-			"slug" : "api",
-			"icon" : "section"
+			"route" : "api",
+			"icon" : "right",
+			"defaultExpanded": false,
+			"pages": [
+				{
+					"name": "Ping",
+					"icon" : "docs",
+					"filename": "api/010_ping"
+
+				}
+			]
 		},
 		{
 			"name" : "Firebase",
-			"slug" : "firebase",
-			"icon" : "section"
+			"route" : "firebase",
+			"icon" : "right"
 		},
 		{
 			"name" : "React",
-			"slug" : "react",
-			"icon" : "section",
+			"route" : "react",
+			"icon" : "right",
 			"pages": [
 				{
 					"name": "Report Web Vitals",
@@ -51,18 +68,18 @@
 		},
 		{
 			"name" : "Recruitment",
-			"slug" : "recruitment",
-			"icon" : "section"
+			"route" : "recruitment",
+			"icon" : "right"
 		},
 		{
 			"name" : "SysOps",
-			"slug" : "sysops",
-			"icon" : "section"
+			"route" : "sysops",
+			"icon" : "right"
 		},
 		{
 			"name" : "WordPress",
-			"slug" : "wordpress",
-			"icon" : "section",
+			"route" : "wordpress",
+			"icon" : "right",
 			"pages": [
 				{
 					"name": "About WordPress",
@@ -72,8 +89,8 @@
 			"sections": [
 				{
 					"name" : "Plugins",
-					"slug" : "wordpress/plugins",
-					"icon" : "section"
+					"route" : "wordpress/plugins",
+					"icon" : "right"
 				}
 			]
 		}
