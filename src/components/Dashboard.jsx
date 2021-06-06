@@ -1,5 +1,5 @@
 import React from 'react'
-// import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import clsx from 'clsx'
 import {
     makeStyles,
@@ -15,10 +15,10 @@ const useStyles = makeStyles((theme) => ({
 export default function Dashboard() {
   
   const classes = useStyles()
-  // const pingpongSlice = useSelector(state => state.pingpong)
-  // const {
-  //   ting,
-  // } = pingpongSlice
+  const docsifySlice = useSelector(state => state.docsify)
+  const {
+    config,
+  } = docsifySlice
 
 
   return <div className={ clsx( classes.dashboard ) } >
@@ -29,10 +29,9 @@ export default function Dashboard() {
                     Maintains useful, up to date documentation for internal and external use
                   </Typography>
 
-                  <Typography>
-                    read the config file
-                  </Typography>
-                  
+                  <pre>
+                    { JSON.stringify( config, null, 2 ) }
+                  </pre>
                   
                 </Grid>
 
@@ -42,7 +41,5 @@ export default function Dashboard() {
 }
 
 /*
-<pre>
-                    { JSON.stringify( ting, null, 2 ) }
-                  </pre>
+
 */

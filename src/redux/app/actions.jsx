@@ -6,7 +6,6 @@ import {
 
 export const overlay = createAction(`APP/OVERLAY`) 
 export const path = createAction(`APP/PATH`) 
-export const title = createAction(`APP/TITLE`) 
 export const darkMode = createAction(`APP/DARKMODE`) 
 export const rightMenuOpen = createAction(`APP/RIGHTMENUOPEN`) 
 
@@ -22,13 +21,12 @@ export const toggleDarkMode = darkMode => {
 	return true
 }
 
-export const goTo = ( path, title ) => {
+export const goTo = ( path ) => {
 	const history = getHistory()
 	// const { location } = history
 	history.push( path )
 	const store = getStore()
 	store.dispatch({type: `APP/PATH`, path })
-	store.dispatch({type: `APP/TITLE`, title })
 	return true
 }
 

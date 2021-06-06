@@ -16,6 +16,9 @@ import {
   toggleRightMenuOpen,
 } from './redux/app/actions'
 import {
+  initDocsfify,
+} from './redux/docsify/actions'
+import {
   Dashboard,
   RightMenu,
   Settings,
@@ -107,6 +110,16 @@ export default function Localify() {
 
   const classes = useStyles()
   const appSlice = useSelector(state => state.app)
+  const docsifySlice = useSelector(state => state.docsify)
+
+  React.useEffect(() => {
+    const {
+      configLoading,
+      configLoaded,
+    } = docsifySlice
+    if (!configLoading && !configLoaded) initDocsfify()
+  }, [docsifySlice])
+
   const {
     rightMenuOpen,
   } = appSlice
