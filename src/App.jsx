@@ -12,28 +12,16 @@ import {
 import {
   Overlay,
 } from './components'
-// import {
-//   initPingPong
-// } from './redux/pingpong/actions'
 import Docsify from './Docsify'
 
 export default function App() {
 
     const appSlice = useSelector(state => state.app)
-    // const pingpongSlice = useSelector(state => state.pingpong)
     let theme = themeLight
     const {
       darkMode,
     } = appSlice
     if ( darkMode ) theme = themeDark
-
-    // React.useEffect(() => {
-    //   const {
-    //     initted,
-    //     initting,
-    //   } = pingpongSlice
-    //   if (!initted && !initting) initPingPong()
-    // }, [pingpongSlice])
 
     return <MuiThemeProvider theme={ createMuiTheme( theme ) }>
               <CssBaseline />

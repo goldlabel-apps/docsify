@@ -5,43 +5,31 @@ import {
     makeStyles,
     Grid,
 } from '@material-ui/core/'
-import { 
-  Navigation,
-} from './'
 
 const useStyles = makeStyles((theme) => ({
-  dashboard: {
+  navigation: {
   },
 }))
 
-export default function Dashboard() {
-  
-  let showJSON = false
-
+export default function Navigation() {
+ 
   const classes = useStyles()
   const docsifySlice = useSelector(state => state.docsify)
   const {
     config,
   } = docsifySlice
   if ( !config ) return null
+  // let showJSON = true
   // const {
   //   title,
+    
   // } = config
 
-  return <div className={ clsx( classes.dashboard ) } >
+  return <div className={ clsx( classes.navigation ) } >
               <Grid container>
-
                 <Grid item xs={ 12 } >
-
-                  <Navigation />
-
-                  { showJSON ? <pre>
-                    { JSON.stringify( config, null, 2 ) }
-                  </pre> : null }
-                  
-                </Grid>
-
-                
+                  Navigation
+                </Grid>                
               </Grid>
           </div>
 }

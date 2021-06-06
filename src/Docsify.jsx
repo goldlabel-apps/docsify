@@ -121,6 +121,15 @@ export default function Localify() {
   }, [docsifySlice])
 
   const {
+    config,
+  } = docsifySlice
+  if (! config ) return null
+
+  const { 
+    title, 
+  } = config
+
+  const {
     rightMenuOpen,
   } = appSlice
 
@@ -147,7 +156,7 @@ export default function Localify() {
         <Toolbar>
 
           <Typography variant="h6" noWrap>
-            @docsify
+            { title }
           </Typography>
 
           <div className={ clsx ( classes.grow ) } />
