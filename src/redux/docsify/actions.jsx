@@ -9,6 +9,8 @@ export const config = createAction(`DOCSIFY/CONFIG`)
 export const configLoading = createAction(`DOCSIFY/CONFIG/LOADING`) 
 export const configLoaded = createAction(`DOCSIFY/CONFIG/LOADED`) 
 
+
+
 export const initDocsfify = () => {
 	const store = getStore()
 	store.dispatch({type: `DOCSIFY/CONFIG/LOADING`, configLoading: true })
