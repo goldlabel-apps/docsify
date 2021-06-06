@@ -1,5 +1,3 @@
-![header](../../media/header.png) 
-
 ## Process 
 
 
