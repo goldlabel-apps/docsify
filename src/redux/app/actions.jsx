@@ -11,15 +11,14 @@ export const rightMenuOpen = createAction(`APP/RIGHTMENUOPEN`)
 export const appRoute = createAction(`APP/ROUTE`) 
 
 export const getRoutebySlug = slug => {
-	console.log ( 'getRoutebySlug', slug ) 
-	// const history = getHistory()
-	// const store = getStore()
-	// const {
-	// 	slug,
-	// } = appRoute
-	// history.push( slug )
-	// store.dispatch({type: `APP/ROUTE`, appRoute })
-	return true
+	const store = getStore()
+	const pages = store.getState().docsify.config.pages
+	for (let i = 0; i < pages.length; i++ ) {
+		if( `/${slug}` === pages[i].slug){
+			return pages[i]
+		}
+	}
+	return false
 }
 
 export const goToSlug = appRoute => {

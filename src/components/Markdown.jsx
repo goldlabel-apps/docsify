@@ -9,6 +9,7 @@ import {
 } from '@material-ui/core/'
 import { 
   goTo,
+  goToSlug,
   getRoutebySlug,
 } from '../redux/app/actions'
 import { getHistory } from '../'
@@ -34,8 +35,12 @@ export default function Markdown() {
       slug,
     } = appRoute
     if ( getHistory().location.pathname !== slug) {
-       console.log ( 'getRoutebySlug', getRoutebySlug( slug ) )
-       
+       // console.log ( 'getRoutebySlug', getRoutebySlug( slug ) )
+       let route = getRoutebySlug( slug )
+       // console.log ( 'route', route )
+       if (route){
+         goToSlug( route )
+       }
     }
   }, [appSlice])
 
