@@ -11,7 +11,7 @@ export const docsifySlice = {
   config: null,
   configLoading: false,
   configLoaded: false,
-  markdown: `## here is some  here is more`,
+  markdown: `This ~is not~ strikethrough, but ~~this is~~!`,
   
   
 }

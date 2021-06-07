@@ -1,9 +1,10 @@
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
+import gfm from 'remark-gfm'
 import clsx from 'clsx'
 import { useSelector } from 'react-redux'
 import {
     makeStyles,
-    // Button,
     Typography,
     Grid,
 } from '@material-ui/core/'
@@ -13,7 +14,6 @@ import {
   getRoutebySlug,
 } from '../redux/app/actions'
 import { getHistory } from '../'
-// import { Icon } from '../../theme'
 
 const useStyles = makeStyles((theme) => ({
   help: {
@@ -31,8 +31,6 @@ export default function Markdown() {
     markdown,
   } = docsifySlice
   
-  console.log ('markdown', markdown)
-
   React.useEffect(() => {
     const {
       appRoute,
@@ -41,9 +39,7 @@ export default function Markdown() {
       slug,
     } = appRoute
     if ( getHistory().location.pathname !== slug) {
-       // console.log ( 'getRoutebySlug', getRoutebySlug( slug ) )
        let route = getRoutebySlug( slug )
-       // console.log ( 'route', route )
        if (route){
          goToSlug( route )
        }
@@ -63,6 +59,9 @@ export default function Markdown() {
                   { name }
                 </Typography>
 
+                <ReactMarkdown remarkPlugins={[[gfm, {singleTilde: false}]]}>
+                  { markdown }
+                </ReactMarkdown>
                 
               </Grid>
             </Grid>
