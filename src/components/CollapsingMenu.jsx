@@ -75,7 +75,6 @@ export default function CollapsingMenu( props ) {
 		          	<Icon icon={ icon } color={ `secondary` } />
 		          </div>
 		          <Typography 
-		          	variant={ `button` }
 		          	className={clsx( classes.hTag )}>
 		          	{ title }
 		          </Typography>

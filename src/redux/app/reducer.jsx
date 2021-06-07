@@ -4,10 +4,18 @@ import {
   path,
   darkMode,
   rightMenuOpen,
+  appRoute,
 } from "./actions"
 
 export const appSlice = {
   darkMode: false,
+  appRoute: {
+    "name": "Start",
+    "description": "Welcome to docsify",
+    "icon" : "home",
+    "file": "api/010_ping.md",
+    "slug": "api/ping"
+  },
   path: `/`,
   overlay: false,
   helpOn: true,
@@ -16,6 +24,11 @@ export const appSlice = {
 
 const appReducer = createReducer( appSlice, {
 
+  [appRoute]: (state, action) => {
+    state.appRoute = action.appRoute
+    return state
+  },
+  
   [rightMenuOpen]: (state, action) => {
     state.rightMenuOpen = action.rightMenuOpen
     return state

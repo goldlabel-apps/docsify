@@ -11,6 +11,7 @@ export const docsifySlice = {
   config: null,
   configLoading: false,
   configLoaded: false,
+  
 }
 
 const docsifyReducer = createReducer( docsifySlice, {

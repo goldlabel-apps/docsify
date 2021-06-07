@@ -6,6 +6,7 @@ import Dashboard from './Dashboard'
 import ImageUpload from './ImageUpload'
 import Settings from './Settings'
 import Navigation from './Navigation'
+import Markdown from './Markdown'
 
 export {
 	CollapsingMenu,
@@ -16,4 +17,5 @@ export {
 	ImageUpload,
 	Settings,
 	Navigation,
+	Markdown,
 }

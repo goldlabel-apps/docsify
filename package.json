@@ -6,6 +6,7 @@
   "author": "listingslab <listingslab@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "_project": "@docsify",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "deploy": "yarn build && firebase deploy"

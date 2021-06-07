@@ -9,11 +9,9 @@ import {
 } from '@material-ui/core/'
 import { 
   goTo,
-  toggleHelpOn,
-} from '../../redux/app/actions'
-import { 
-  Collapsing,
-} from '../'
+  getRoutebySlug,
+} from '../redux/app/actions'
+import { getHistory } from '../'
 // import { Icon } from '../../theme'
 
 const useStyles = makeStyles((theme) => ({
@@ -21,26 +19,39 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function Page() {
-
+export default function Markdown() {
   const classes = useStyles()
   const appSlice = useSelector(state => state.app)
   const {
-    helpOpen,
+    appRoute,
   } = appSlice
 
+  React.useEffect(() => {
+    const {
+      appRoute,
+    } = appSlice
+    const { 
+      slug,
+    } = appRoute
+    if ( getHistory().location.pathname !== slug) {
+       console.log ( 'getRoutebySlug', getRoutebySlug( slug ) )
+       
+    }
+  }, [appSlice])
+
+  const {
+    name,
+  } = appRoute
+
   return <div className={clsx( classes.help )}>
-          <Collapsing options={{
-            open: helpOpen,
-            toggleFunc: () => {
-              toggleHelpOn( !helpOpen )
-            },
-            icon: `help`,
-            iconColor: `secondary`,
-            title: `Help`,
-          }}>
+
             <Grid container>
               <Grid item xs={ 12 } >
+
+                <Typography variant={ `h3` }>
+                  { name }
+                </Typography>
+
                 <Typography>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                   Praesent lacinia mi dolor, vel dignissim justo molestie sed. 
@@ -59,6 +70,5 @@ export default function Page() {
                 </Button>
               </Grid>
             </Grid>
-          </Collapsing>
         </div>
 }
