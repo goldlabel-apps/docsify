@@ -4,6 +4,9 @@ import {
   config,
   configLoading,
   configLoaded,
+  markdown,
+  markdownLoading,
+  markdownLoaded,
 } from "./actions"
 
 export const docsifySlice = {
@@ -11,13 +14,28 @@ export const docsifySlice = {
   config: null,
   configLoading: false,
   configLoaded: false,
-  markdown: `This ~is not~ strikethrough, but ~~this is~~!`,
-  
-  
+  markdown: null,
+  markdownLoading: false,
+  markdownLoaded: false,
 }
 
 const docsifyReducer = createReducer( docsifySlice, {
  
+  [markdown]: (state, action) => {
+    state.markdown = action.markdown
+    return state
+  },
+
+  [markdownLoading]: (state, action) => {
+    state.markdownLoading = action.markdownLoading
+    return state
+  },
+
+  [markdownLoaded]: (state, action) => {
+    state.markdownLoaded = action.markdownLoaded
+    return state
+  },
+
   [config]: (state, action) => {
     state.config = action.config
     return state

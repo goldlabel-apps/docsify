@@ -8,7 +8,7 @@ import {
 } from "./actions"
 
 export const appSlice = {
-  darkMode: false,
+  darkMode: true,
   appRoute: {
     "name": "Start",
     "description": "Welcome to docsify",

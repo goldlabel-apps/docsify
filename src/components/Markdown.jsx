@@ -5,14 +5,18 @@ import clsx from 'clsx'
 import { useSelector } from 'react-redux'
 import {
     makeStyles,
-    Typography,
-    Grid,
+    LinearProgress,
 } from '@material-ui/core/'
-import { 
-  // goTo,
+import {
   goToSlug,
   getRoutebySlug,
 } from '../redux/app/actions'
+
+import { 
+  loadMarkdown,
+} from '../redux/docsify/actions'
+
+
 import { getHistory } from '../'
 
 const useStyles = makeStyles((theme) => ({
@@ -25,10 +29,8 @@ export default function Markdown() {
   const appSlice = useSelector(state => state.app)
   const docsifySlice = useSelector(state => state.docsify)
   const {
-    appRoute,
-  } = appSlice
-  const {
     markdown,
+    markdownLoading,
   } = docsifySlice
   
   React.useEffect(() => {
@@ -40,30 +42,21 @@ export default function Markdown() {
     } = appRoute
     if ( getHistory().location.pathname !== slug) {
        let route = getRoutebySlug( slug )
-       if (route){
-         goToSlug( route )
-       }
+       if (route) goToSlug( route )
     }
-  }, [appSlice])
-
-  const {
-    name,
-  } = appRoute
+    const {
+      markdownLoading,
+      markdownLoaded,
+    } = docsifySlice
+    if ( !markdownLoading && !markdownLoaded ) loadMarkdown()
+  }, [appSlice, docsifySlice])
 
   return <div className={clsx( classes.help )}>
-
-            <Grid container>
-              <Grid item xs={ 12 } >
-
-                <Typography variant={ `h4` }>
-                  { name }
-                </Typography>
-
-                <ReactMarkdown remarkPlugins={[[gfm, {singleTilde: false}]]}>
-                  { markdown }
-                </ReactMarkdown>
-                
-              </Grid>
-            </Grid>
+          
+          { markdownLoading ? <LinearProgress color={ `secondary` } /> : null}
+          
+          <ReactMarkdown remarkPlugins={[[gfm, {singleTilde: false}]]}>
+            { markdown }
+          </ReactMarkdown>
         </div>
 }

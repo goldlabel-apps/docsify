@@ -4,21 +4,21 @@
 	"pages": [
 		{
 			"name": "Start",
-			"file": "/000_start.md",
+			"file": "/md/000_start.md",
 			"slug": "/start",
 			"icon" : "right"
 		},
 		{
 			"name": "JavaScript",
 			"icon" : "right",
-			"file": "/javascript/001_javascript.md",
+			"file": "/md/javascript/001_javascript.md",
 			"slug": "/javascript"
 		},
 		{
 			"name": "Ping the API",
 			"description": "Test the API with a traditional ping/pong call",
 			"icon" : "right",
-			"file": "/api/010_ping.md",
+			"file": "/md/api/010_ping.md",
 			"slug": "/api/ping"
 		}
 	],
