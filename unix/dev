@@ -2,7 +2,7 @@
 # chmod ug+x dev
 clear
 
-echo 'React develepment server' $1
+echo 'Starting React dev server on ' $1
 cd ./$1
 yarn
 yarn start
