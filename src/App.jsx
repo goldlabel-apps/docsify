@@ -18,6 +18,10 @@ import Docsify from './Docsify'
 export default function App() {
 
     const appSlice = useSelector(state => state.app)
+    const docsifySlice = useSelector(state => state.docsify)
+    const {
+      markdownLoading,
+    } = docsifySlice
     let theme = themeLight
     const {
       darkMode,
@@ -27,7 +31,7 @@ export default function App() {
     return <MuiThemeProvider theme={ createMuiTheme( theme ) }>
               <CssBaseline />
               <Overlay />
-              <LinearProgress color={ `secondary` } />
+              { markdownLoading ? <LinearProgress color={ `secondary` } /> : null }
               <Docsify />
             </MuiThemeProvider> 
 }

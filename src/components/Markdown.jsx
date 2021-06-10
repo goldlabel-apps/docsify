@@ -18,7 +18,8 @@ import {
 import { getHistory } from '../'
 
 const useStyles = makeStyles((theme) => ({
-  help: {
+  markdown: {
+    border: '1px solid yellow',
   },
 }))
 
@@ -30,25 +31,27 @@ export default function Markdown() {
     markdown,
   } = docsifySlice
   
-  React.useEffect(() => {
-    const {
-      appRoute,
-    } = appSlice
-    const { 
-      slug,
-    } = appRoute
-    if ( getHistory().location.pathname !== slug) {
-       let route = getRoutebySlug( slug )
-       if (route) goToSlug( route )
-    }
-    const {
-      markdownLoading,
-      markdownLoaded,
-    } = docsifySlice
-    if ( !markdownLoading && !markdownLoaded ) loadMarkdown()
-  }, [appSlice, docsifySlice])
+  if ( !markdown ) return null
+  
+  // React.useEffect(() => {
+  //   const {
+  //     appRoute,
+  //   } = appSlice
+  //   const { 
+  //     slug,
+  //   } = appRoute
+  //   if ( getHistory().location.pathname !== slug) {
+  //      let route = getRoutebySlug( slug )
+  //      if (route) goToSlug( route )
+  //   }
+  //   const {
+  //     markdownLoading,
+  //     markdownLoaded,
+  //   } = docsifySlice
+  //   if ( !markdownLoading && !markdownLoaded ) loadMarkdown()
+  // }, [appSlice, docsifySlice])
 
-  return <div className={clsx( classes.help )}>
+  return <div className={clsx( classes.markdown )}>
           <ReactMarkdown remarkPlugins={ [[ gfm, { singleTilde: false } ]] }>
             { markdown }
           </ReactMarkdown>

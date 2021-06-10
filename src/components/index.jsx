@@ -7,6 +7,7 @@ import ImageUpload from './ImageUpload'
 import Settings from './Settings'
 import Navigation from './Navigation'
 import Markdown from './Markdown'
+import DarkmodeSwitch from './DarkmodeSwitch'
 
 export {
 	CollapsingMenu,
@@ -18,4 +19,5 @@ export {
 	Settings,
 	Navigation,
 	Markdown,
+	DarkmodeSwitch,
 }
