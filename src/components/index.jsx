@@ -8,6 +8,7 @@ import Settings from './Settings'
 import Navigation from './Navigation'
 import Markdown from './Markdown'
 import DarkmodeSwitch from './DarkmodeSwitch'
+import ContentTree from './ContentTree'
 
 export {
 	CollapsingMenu,
@@ -20,4 +21,5 @@ export {
 	Navigation,
 	Markdown,
 	DarkmodeSwitch,
+	ContentTree,
 }
