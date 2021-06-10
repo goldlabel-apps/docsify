@@ -6,7 +6,7 @@ import {
     Grid,
 } from '@material-ui/core/'
 import { 
-  Navigation,
+  ContentTree,
 } from './'
 
 const useStyles = makeStyles((theme) => ({
@@ -28,7 +28,7 @@ export default function Dashboard() {
   return <div className={ clsx( classes.dashboard ) } >
               <Grid container>
                 <Grid item xs={ 12 } >
-                  <Navigation />
+                  <ContentTree />
                   { showJSON ? <pre>
                     { JSON.stringify( config, null, 2 ) }
                   </pre> : null }
