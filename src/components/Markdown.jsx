@@ -5,13 +5,11 @@ import clsx from 'clsx'
 import { useSelector } from 'react-redux'
 import {
     makeStyles,
-    LinearProgress,
 } from '@material-ui/core/'
 import {
   goToSlug,
   getRoutebySlug,
 } from '../redux/app/actions'
-
 import { 
   loadMarkdown,
 } from '../redux/docsify/actions'
@@ -30,7 +28,6 @@ export default function Markdown() {
   const docsifySlice = useSelector(state => state.docsify)
   const {
     markdown,
-    markdownLoading,
   } = docsifySlice
   
   React.useEffect(() => {
@@ -52,10 +49,7 @@ export default function Markdown() {
   }, [appSlice, docsifySlice])
 
   return <div className={clsx( classes.help )}>
-          
-          { markdownLoading ? <LinearProgress color={ `secondary` } /> : null}
-          
-          <ReactMarkdown remarkPlugins={[[gfm, {singleTilde: false}]]}>
+          <ReactMarkdown remarkPlugins={ [[ gfm, { singleTilde: false } ]] }>
             { markdown }
           </ReactMarkdown>
         </div>
