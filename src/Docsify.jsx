@@ -22,6 +22,7 @@ import {
   Dashboard,
   RightMenu,
   Settings,
+  DarkmodeSwitch,
 } from './components'
 
 const drawerWidth = 175
@@ -165,6 +166,8 @@ export default function Localify() {
           </Typography>
 
           <div className={ clsx ( classes.grow ) } />
+
+          <DarkmodeSwitch />
           
           <IconButton
             color={`secondary`}

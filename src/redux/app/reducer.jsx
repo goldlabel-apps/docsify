@@ -8,13 +8,8 @@ import {
 } from "./actions"
 
 export const appSlice = {
-  darkMode: true,
-  appRoute: {
-    "name": "Start",
-    "file": "/md/000_start.md",
-    "slug": "/start",
-    "icon" : "right"
-  },
+  darkMode: false,
+  appRoute: null,
   path: `/`,
   overlay: false,
   helpOn: true,
