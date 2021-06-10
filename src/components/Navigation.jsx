@@ -45,30 +45,30 @@ export default function Navigation() {
   return <div className={ clsx( classes.navigation ) } >
               <Grid container>
 
-                <Grid item xs={ 4 } >
+                <Grid item xs={ 12 } md={ 4 } >
 
                 { pages.length ? <React.Fragment>
-                  <List className={ clsx( classes.list ) }>
-                  { pages.map( (item, i) => {                  
-                    const {
-                      name,
-                      icon,
-                    } = item
-                    return <ListItem 
-                              button
-                              key={ `section_page_${i}` }
-                              onClick={ (e) => {
-                                e.preventDefault()
-                                goToSlug( item )
-                              }}>
-                              <ListItemAvatar>
-                                <Icon icon={ icon } color={ `secondary` } />
-                              </ListItemAvatar>
-                              <ListItemText 
-                                primary={ name }
-                              />
-                            </ListItem>
-                  })}
+                  <List className={ clsx( classes.list ) }> 
+                    { pages.map( (item, i) => {                  
+                      const {
+                        name,
+                        icon,
+                      } = item
+                      return <ListItem 
+                                button
+                                key={ `section_page_${i}` }
+                                onClick={ (e) => {
+                                  e.preventDefault()
+                                  goToSlug( item )
+                                }}>
+                                <ListItemAvatar>
+                                  <Icon icon={ icon } color={ `secondary` } />
+                                </ListItemAvatar>
+                                <ListItemText 
+                                  primary={ name }
+                                />
+                              </ListItem>
+                    })}
                   </List>
                 
                 </React.Fragment> : null }
@@ -126,7 +126,7 @@ export default function Navigation() {
 
                 </Grid>
 
-                <Grid item xs={ 8 }>
+                <Grid item xs={ 12 } md={ 8 }>
                   <Markdown />
                 </Grid>
               </Grid>

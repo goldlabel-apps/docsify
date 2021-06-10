@@ -8,6 +8,7 @@ import {
   MuiThemeProvider,  
   createMuiTheme, 
   CssBaseline,
+  LinearProgress,
 } from '@material-ui/core/'
 import {
   Overlay,
@@ -26,6 +27,7 @@ export default function App() {
     return <MuiThemeProvider theme={ createMuiTheme( theme ) }>
               <CssBaseline />
               <Overlay />
+              <LinearProgress color={ `secondary` } />
               <Docsify />
             </MuiThemeProvider> 
 }

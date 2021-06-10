@@ -30,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
   localify: {
     display: 'flex',
   },
+  onTop:{
+    zIndex: 1234567778,
+  },
   btnTxt:{
     marginRight: theme.spacing(),
     marginLeft: theme.spacing(),
@@ -41,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
     background: 'none',
     border: 'none',
     boxShadow: 'none',
+    // top: 100,
     // color: theme.palette.primary.main,
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.sharp,
@@ -147,6 +151,7 @@ export default function Localify() {
   }
 
   return <div className={classes.localify}>
+  
       <AppBar
         position={ `fixed` }
         color={ `default` }

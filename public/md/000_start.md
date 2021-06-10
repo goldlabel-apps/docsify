@@ -1,12 +1,8 @@
-![header](../media/header.png) 
+#### Start
 
-# Getting started
+## Problem
 
-Next > Install
-
-## Goal of this software
-
-Maintain useful, up to date documentation for internal and external use
+Maintaining useful, up to date documentation for internal and external use
 
 ## Solution
 
@@ -20,6 +16,8 @@ Maintain useful, up to date documentation for internal and external use
 	- Authenication 
 - Integration with other listingslab software 
 - Continuous Integration & Deployment
+
+[listingslab](https://listingslab.com/)
 
 ### Install
 

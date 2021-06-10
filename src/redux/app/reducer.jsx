@@ -11,10 +11,9 @@ export const appSlice = {
   darkMode: true,
   appRoute: {
     "name": "Start",
-    "description": "Welcome to docsify",
-    "icon" : "home",
-    "file": "api/010_ping.md",
-    "slug": "api/ping"
+    "file": "/md/000_start.md",
+    "slug": "/start",
+    "icon" : "right"
   },
   path: `/`,
   overlay: false,
