@@ -6,16 +6,14 @@ import { useSelector } from 'react-redux'
 import {
     makeStyles,
 } from '@material-ui/core/'
-import {
-  goToSlug,
-  getRoutebySlug,
-} from '../redux/app/actions'
-import { 
-  loadMarkdown,
-} from '../redux/docsify/actions'
-
-
-import { getHistory } from '../'
+// import {
+//   goToSlug,
+//   getRoutebySlug,
+// } from '../redux/app/actions'
+// import { 
+//   loadMarkdown,
+// } from '../redux/docsify/actions'
+// import { getHistory } from '../'
 
 const useStyles = makeStyles((theme) => ({
   markdown: {
@@ -25,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Markdown() {
   const classes = useStyles()
-  const appSlice = useSelector(state => state.app)
+  // const appSlice = useSelector(state => state.app)
   const docsifySlice = useSelector(state => state.docsify)
   const {
     markdown,
