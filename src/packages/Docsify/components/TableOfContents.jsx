@@ -1,16 +1,21 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { makeStyles } from '@material-ui/core/styles'
-import TreeView from '@material-ui/lab/TreeView'
-import TreeItem from '@material-ui/lab/TreeItem'
-import Typography from '@material-ui/core/Typography'
+import { 
+    useSelector,
+} from 'react-redux'
+import { 
+  makeStyles,
+  Typography,
+} from '@material-ui/core/'
+import { 
+  TreeView,
+  TreeItem,
+} from '@material-ui/lab/'
+
 import Label from '@material-ui/icons/Label'
-import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount'
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown'
-import ArrowRightIcon from '@material-ui/icons/ArrowRight'
+import Book from '@material-ui/icons/Book'
 
 const useTreeItemStyles = makeStyles((theme) => ({
-  root: {
+  tableOfContents: {
     color: theme.palette.text.secondary,
     '&:hover > $content': {
       backgroundColor: 'none',
@@ -23,6 +28,9 @@ const useTreeItemStyles = makeStyles((theme) => ({
       backgroundColor: 'transparent',
     },
   },
+
+
+
   content: {
     color: theme.palette.text.secondary,
     borderTopRightRadius: theme.spacing(2),
@@ -94,14 +102,6 @@ function StyledTreeItem( props) {
   )
 }
 
-StyledTreeItem.propTypes = {
-  bgColor: PropTypes.string,
-  color: PropTypes.string,
-  labelIcon: PropTypes.elementType.isRequired,
-  labelInfo: PropTypes.string,
-  labelText: PropTypes.string.isRequired,
-}
-
 const useStyles = makeStyles({
   root: {
     height: 264,
@@ -113,28 +113,66 @@ const useStyles = makeStyles({
 export default function TableOfContents () {
   const classes = useStyles()
 
+  const docsifySlice = useSelector(state => state.docsify)    
+  const {
+      config,
+  } = docsifySlice
+
+  if ( !config ) return false
+
+  const {
+    chapters,
+  } = config
+
   return <TreeView
-      className={ classes.root }
-      defaultExpanded={['3']}
-      defaultCollapseIcon={<ArrowDropDownIcon />}
-      defaultExpandIcon={<ArrowRightIcon />}
-      defaultEndIcon={<div style={{ width: 24 }} />}
-    >
+            className={ classes.tableOfContents }
+            defaultExpanded={['chapters']}
+          >
+
     
-      <StyledTreeItem nodeId="3" labelText="Chapters" labelIcon={ Label }>
-        
+            <StyledTreeItem 
+              nodeId={ `chapters` }
+              labelText="Chapters" 
+              labelIcon={ Label }
+            >
+                
+              { chapters.map((item, i) => {
+                const {
+                  title,
+                  entries,
+                } = item
+                
 
-        <StyledTreeItem
-          nodeId="5"
-          labelText="Social"
-          labelIcon={SupervisorAccountIcon}
-          labelInfo="90"
-          color="#1a73e8"
-          bgColor="#e8f0fe"
-        />
+                return <StyledTreeItem
+                          key={ `item_${i}` }
+                          nodeId={ `item_${i}` }
+                          labelText={ title }
+                          labelIcon={ Book }>
+                          { entries ? entries.map((subitem, j) => {
+                            return <StyledTreeItem 
+                                      key={ `${title}_${j}` }
+                                      nodeId={ `subitem_${j}` }
+                                      labelText={ `${subitem.title}` } 
+                                      labelIcon={ Label }
+                                    />
+                          }) : null }
 
-      </StyledTreeItem>
+                          
 
-    </TreeView>
+                       </StyledTreeItem>
+                         
+              })}
+
+              
+
+            </StyledTreeItem>
+
+          </TreeView>
   
 }
+
+/*
+<pre>
+                            { JSON.stringify( entries, null, 2 )}
+                          </pre>
+*/

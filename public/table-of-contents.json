@@ -3,28 +3,37 @@
   "title": "@docsify",
   "description": "Maintain useful and up to date documentation for internal and external use",
   "avatar": "/logo192.png",
+
   "chapters": [
     {
       "title": "Introduction",
       "entries": [
-        { "entry": "docs" },
-        { "entry": "docs/contributing" }
+        {
+          "title": "Start",
+          "mdPath": "/md/introduction/start.md" 
+        },
+        {
+          "title": "OSM",
+          "mdPath": "/md/introduction/open-source-management.md" 
+        }
       ]
     },
     {
       "title": "Developer Guide",
       "entries": [
-        { "entry": "docs/get-started/get-started" },
-        { "entry": "docs/get-started/mapbox-tokens" }
+        {
+          "title": "Install",
+          "mdPath": "/md/developer/install.md" 
+        }
       ]
     },
     {
       "title": "API Reference",
       "entries": [
-        { "entry": "docs/api-reference/attribution-control" },
-        { "entry": "docs/api-reference/canvas-overlay" },
-        { "entry": "docs/api-reference/fly-to-interpolator" },
-        { "entry": "docs/api-reference/fullscreen-control" }
+        {
+          "title": "Ping/Pong",
+          "mdPath": "/md/api/ping.md" 
+        }
       ]
     }
   ]

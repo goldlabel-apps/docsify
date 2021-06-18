@@ -8,6 +8,7 @@ import {
     Grid,
     CardHeader,
     Avatar,
+    Divider,
 } from '@material-ui/core/'
 import {
     loadConfig,
@@ -19,6 +20,9 @@ import {
 const useStyles = makeStyles( theme => ({
     docsify:{
         // border: '1px solid ' + theme.palette.secondary.main,
+    },
+    pad:{
+        margin: theme.spacing(2),
     },
     htags: {
         fontWeight: 'lighter',
@@ -58,7 +62,6 @@ export default function Docsify( ) {
         title,
         description,
         avatar,
-        chapters,
     } = config
 
     return <div className={ clsx( classes.docsify ) }>
@@ -72,12 +75,15 @@ export default function Docsify( ) {
                     <Grid item>
                         <TableOfContents />
                     </Grid>
-                    
+
                     <Grid item>
-                        <pre >
-                           { JSON.stringify( chapters, null, 2 ) }
-                       </pre>
+                        <Divider 
+                            orientation={ `vertical` } 
+                            className={ clsx( classes.pad ) }
+                        />
                     </Grid>
+                    
+                    
                     
                 </Grid>
                 
@@ -89,6 +95,10 @@ export default function Docsify( ) {
 
 /*
 
-
+<Grid item>
+                        <pre >
+                           { JSON.stringify( chapters, null, 2 ) }
+                       </pre>
+                    </Grid>
 
 */
