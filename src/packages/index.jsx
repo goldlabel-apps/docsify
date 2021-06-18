@@ -1,5 +1,5 @@
-import { SkipIntro } from './SkipIntro'
+import { Docsify } from './Docsify'
 
 export {
-	SkipIntro,
+	Docsify,
 }
