@@ -2,13 +2,15 @@ import React from 'react'
 import clsx from 'clsx'
 import {
     makeStyles,
-    Typography,
-    Button,
+    
 } from '@material-ui/core/'
+import {
+    Layout,
+} from './'
 
 const useStyles = makeStyles( theme => ({
-    skipIntro:{
-        // border: '1px solid ' + theme.palette.secondary.main,
+    docsify:{
+        border: '1px solid ' + theme.palette.secondary.main,
     },
     htags: {
         fontWeight: 'lighter',
@@ -23,24 +25,11 @@ const useStyles = makeStyles( theme => ({
     }
 }))
 
-export default function Docsify( props ) {
+export default function Docsify( ) {
 
     const classes = useStyles()
-    const {
-        options,
-    } = props
 
-    const {
-        title,
-        btnTxt,
-        onClick,
-        borderColor,
-        height,
-        width,
-        centerize,
-    } = options
-
-    return <div className={ clsx( centerize ? classes.centerize : null ) }>
-                Docsify
+    return <div className={ clsx( classes.docsify ) }>
+                <Layout />
            </div>
 }

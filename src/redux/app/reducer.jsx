@@ -14,6 +14,7 @@ export const appSlice = {
   overlay: false,
   helpOn: true,
   rightMenuOpen: false,
+  progress: false,
 }
 
 const appReducer = createReducer( appSlice, {

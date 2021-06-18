@@ -13,25 +13,24 @@ import {
 import {
   Overlay,
 } from './components'
-import Docsify from './Docsify'
+import {
+  Docsify,
+} from './packages/Docsify'
 
 export default function App() {
 
     const appSlice = useSelector(state => state.app)
-    const docsifySlice = useSelector(state => state.docsify)
-    const {
-      markdownLoading,
-    } = docsifySlice
     let theme = themeLight
     const {
       darkMode,
+      progress,
     } = appSlice
     if ( darkMode ) theme = themeDark
 
     return <MuiThemeProvider theme={ createMuiTheme( theme ) }>
               <CssBaseline />
               <Overlay />
-              { markdownLoading ? <LinearProgress color={ `secondary` } /> : null }
+              { progress ? <LinearProgress color={ `secondary` } /> : null }
               <Docsify />
             </MuiThemeProvider> 
 }
