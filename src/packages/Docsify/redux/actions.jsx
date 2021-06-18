@@ -2,7 +2,7 @@ import { createAction } from '@reduxjs/toolkit'
 import axios from 'axios'
 import { 
 	getStore,
-} from '../../'
+} from '../../../'
 
 export const error = createAction(`DOCSIFY/ERROR`) 
 export const config = createAction(`DOCSIFY/CONFIG`) 
@@ -12,7 +12,8 @@ export const markdown = createAction(`DOCSIFY/MARKDOWN`)
 export const markdownLoading = createAction(`DOCSIFY/MARKDOWN/LOADING`) 
 export const markdownLoaded = createAction(`DOCSIFY/MARKDOWN/LOADED`) 
 
-export const initDocsfify = () => {
+export const loadConfig = () => {
+
 	const store = getStore()
 	store.dispatch({type: `DOCSIFY/CONFIG/LOADING`, configLoading: true })
 	store.dispatch({type: `APP/OVERLAY`, overlay: true })
