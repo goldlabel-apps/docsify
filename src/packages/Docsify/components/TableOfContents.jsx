@@ -11,8 +11,9 @@ import {
   TreeItem,
 } from '@material-ui/lab/'
 
-import Label from '@material-ui/icons/Label'
-import Book from '@material-ui/icons/Book'
+import Label from '@material-ui/icons/InsertDriveFile'
+import Book from '@material-ui/icons/MenuBook'
+import Entry from '@material-ui/icons/BookmarkBorder'
 
 const useTreeItemStyles = makeStyles((theme) => ({
   tableOfContents: {
@@ -28,9 +29,6 @@ const useTreeItemStyles = makeStyles((theme) => ({
       backgroundColor: 'transparent',
     },
   },
-
-
-
   content: {
     color: theme.palette.text.secondary,
     borderTopRightRadius: theme.spacing(2),
@@ -67,13 +65,26 @@ const useTreeItemStyles = makeStyles((theme) => ({
   },
 }))
 
-function StyledTreeItem( props) {
+const handleClick = ( props ) => {
+  const {
+    entry,
+  } = props
+  if ( !entry ) return null
+  console.log ( 'entry', entry )
+  return true
+}
+
+function StyledTreeItem( props ) {
 
   const classes = useTreeItemStyles()
   const { labelText, labelIcon: LabelIcon, labelInfo, color, bgColor, ...other } = props
 
   return (
     <TreeItem
+      onClick={ (e) => {
+        e.preventDefault()
+        handleClick( props )
+      }}
       label={
         <div className={classes.labelRoot}>
           <LabelIcon color="inherit" className={classes.labelIcon} />
@@ -103,76 +114,55 @@ function StyledTreeItem( props) {
 }
 
 const useStyles = makeStyles({
-  root: {
-    height: 264,
-    flexGrow: 1,
-    maxWidth: 400,
+  tableOfContents: {
+    marginTop: 15,
+    minWidth: 250,
   },
 })
 
 export default function TableOfContents () {
-  const classes = useStyles()
 
+  const classes = useStyles()
   const docsifySlice = useSelector(state => state.docsify)    
   const {
       config,
   } = docsifySlice
 
   if ( !config ) return false
-
   const {
+    title,
     chapters,
   } = config
 
-  return <TreeView
-            className={ classes.tableOfContents }
-            defaultExpanded={['chapters']}
-          >
-
-    
+  return <TreeView className={ classes.tableOfContents }
+            defaultExpanded={['chapters']} >
             <StyledTreeItem 
               nodeId={ `chapters` }
-              labelText="Chapters" 
-              labelIcon={ Label }
-            >
-                
-              { chapters.map((item, i) => {
+              labelText={ title } 
+              labelIcon={ Label }>
+              { chapters.map((chapter, i) => {
                 const {
                   title,
+                  slug,
                   entries,
-                } = item
-                
-
+                } = chapter
                 return <StyledTreeItem
-                          key={ `item_${i}` }
-                          nodeId={ `item_${i}` }
+                          key={ `chapter_${i}` }
+                          nodeId={ `chapter_${i}` }
                           labelText={ title }
-                          labelIcon={ Book }>
-                          { entries ? entries.map((subitem, j) => {
+                          labelIcon={ Entry }
+                          chapter={ chapter }>
+                          { entries ? entries.map((entry, j) => {
                             return <StyledTreeItem 
-                                      key={ `${title}_${j}` }
-                                      nodeId={ `subitem_${j}` }
-                                      labelText={ `${subitem.title}` } 
-                                      labelIcon={ Label }
+                                      key={ `${slug}_${j}` }
+                                      nodeId={ `${slug}_${j}` }
+                                      labelText={ `${entry.title}` } 
+                                      labelIcon={ Book }
+                                      entry={ entry }
                                     />
                           }) : null }
-
-                          
-
                        </StyledTreeItem>
-                         
               })}
-
-              
-
             </StyledTreeItem>
-
-          </TreeView>
-  
+          </TreeView>  
 }
-
-/*
-<pre>
-                            { JSON.stringify( entries, null, 2 )}
-                          </pre>
-*/

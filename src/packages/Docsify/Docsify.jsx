@@ -6,28 +6,26 @@ import {
 import {
     makeStyles,
     Grid,
-    CardHeader,
-    Avatar,
-    Divider,
 } from '@material-ui/core/'
 import {
     loadConfig,
+    loadMarkdown,
 } from './redux/actions'
 import {
     TableOfContents,
+    Markdown,
 } from './components'
 
 const useStyles = makeStyles( theme => ({
     docsify:{
-        // border: '1px solid ' + theme.palette.secondary.main,
     },
     pad:{
-        margin: theme.spacing(2),
+        marginRight: theme.spacing(2),
+        marginLeft: theme.spacing(2),
     },
     htags: {
         fontWeight: 'lighter',
     },
-
     centerize: {
       minHeight: 'calc( 100vh - 75px )',
       display: 'flex',
@@ -46,59 +44,30 @@ export default function Docsify( ) {
         config,
     } = docsifySlice
 
-    // console.log( 'config', config )
-
     React.useEffect(() => {    
+        
         const {
             configLoading,
             configLoaded,
+            markdownLoading,
+            markdownLoaded,
         } = docsifySlice
+        
         if (!configLoading && !configLoaded) loadConfig()
+        if (!markdownLoading && !markdownLoaded) loadMarkdown(`/md/introduction/start.md`)
+
     }, [ docsifySlice ]) 
 
     if ( !config ) return null
 
-    const {
-        title,
-        description,
-        avatar,
-    } = config
-
     return <div className={ clsx( classes.docsify ) }>
-                <CardHeader
-                    avatar={ <Avatar src={ avatar } /> }
-                    title={ title }
-                    subheader={ description } 
-                />
                 <Grid container>
-
-                    <Grid item>
+                    <Grid item xs={ 3 }>
                         <TableOfContents />
                     </Grid>
-
-                    <Grid item>
-                        <Divider 
-                            orientation={ `vertical` } 
-                            className={ clsx( classes.pad ) }
-                        />
-                    </Grid>
-                    
-                    
-                    
+                    <Grid item xs={ 9 }>
+                        <Markdown />
+                    </Grid>            
                 </Grid>
-                
            </div>
 }
-
-
-
-
-/*
-
-<Grid item>
-                        <pre >
-                           { JSON.stringify( chapters, null, 2 ) }
-                       </pre>
-                    </Grid>
-
-*/

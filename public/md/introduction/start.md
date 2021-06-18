@@ -1,4 +1,4 @@
-#### Start
+# Start
 
 ## Problem
 

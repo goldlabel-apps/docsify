@@ -7,32 +7,15 @@
   "chapters": [
     {
       "title": "Introduction",
+      "slug": "introduction",
       "entries": [
         {
           "title": "Start",
-          "mdPath": "/md/introduction/start.md" 
+          "file": "/md/introduction/start.md" 
         },
         {
           "title": "OSM",
-          "mdPath": "/md/introduction/open-source-management.md" 
-        }
-      ]
-    },
-    {
-      "title": "Developer Guide",
-      "entries": [
-        {
-          "title": "Install",
-          "mdPath": "/md/developer/install.md" 
-        }
-      ]
-    },
-    {
-      "title": "API Reference",
-      "entries": [
-        {
-          "title": "Ping/Pong",
-          "mdPath": "/md/api/ping.md" 
+          "file": "/md/introduction/open-source-management.md" 
         }
       ]
     }
